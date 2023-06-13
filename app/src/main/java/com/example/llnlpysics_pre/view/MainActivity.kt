@@ -7,7 +7,7 @@ import com.example.llnlpysics_pre.R
 import com.example.llnlpysics_pre.`interface`.Pinterface
 import com.example.llnlpysics_pre.presenter.MainActivityPresenter
 
-class MainActivity: AppCompatActivity(), Pinterface.DataView{
+class MainActivity(override var result: Any) : AppCompatActivity(), Pinterface.DataView{
     private var presenter: MainActivityPresenter?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,12 +16,12 @@ class MainActivity: AppCompatActivity(), Pinterface.DataView{
     }
 
     override fun initView() {
-        result.text =presenter?.getCounter()
-        btn.setOnClickListener{presenter?.increamentValue()}
+//        result.text =presenter?.getCounter()
+//        btn.setOnClickListener{presenter?.increamentValue()}
     }
 
     override fun updateView() {
-        result.text=presenter?.getCounter()
+//        result.text=presenter?.getCounter()
     }
 
 }
